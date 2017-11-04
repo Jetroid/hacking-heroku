@@ -11,6 +11,7 @@ for x in range(5,11):
 
     #Use XPATH queries to get artists and titles from page
     words[str(x)] = tree.xpath('//ul[@class="list-inline"]//li//a//text()')
+    words[str(x)] = [word.upper() for word in words[str(x)]]
 
 dir = os.path.dirname(os.path.abspath(__file__))
 output = os.path.join(dir, "words.json")
