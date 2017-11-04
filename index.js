@@ -3,7 +3,7 @@ var cors = require('cors');
 var app = express();
 var words = require('./words');
 
-var allowedOrigins = ['http://localhost',
+var allowedOrigins = ['http://localhost:4000',
                       'https://jetholt.com'];
 
 app.use(cors({
